@@ -1,32 +1,47 @@
 #include <stdio.h>
 
-// Function to generate multiples of 3 without indices
-void generateMultiplesOfThree(int n, FILE *file) {
-    int currentMultiple = 3;
-    fprintf(file, "Value\n");
-
-    while (n > 0) {
-        fprintf(file, "%d\n", currentMultiple);
-        currentMultiple += 3;
-        n--;
+void convolution(const int *array1, int len1, const int *array2, int len2, int *result) {
+    int lenResult = len1 + len2 - 1;
+    for (int i = 0; i < lenResult; i++) {
+        result[i] = 0;
+    }
+    for (int i = 0; i < len1; i++) {
+        for (int j = 0; j < len2; j++) {
+            result[i + j] += array1[i] * array2[j];
+        }
     }
 }
 
-int main() {
-    // Open file for writing
-    FILE *file = fopen("values2.txt", "w");
-    if (file == NULL) {
-        printf("Error opening file for writing.");
-        return 1; // Exit with an error code
+void sum_of_ap(int a, int d, int N) {
+
+    int x[N];
+    for (int i = 0; i < N; i++) {
+        x[i] = a + i * d;
     }
 
-    // Generate and write the first 12 multiples of 3
-    generateMultiplesOfThree(12, file);
-
-    // Close the file
+    int u[N];
+    for (int i = 0; i < N; i++) {
+        u[i] = 1;
+    }
+ 
+    int result[N + N - 1];
+    convolution(x, N, u, N, result);
+    FILE *file = fopen("result_terms.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+    }
+    for (int i = 0; i < N ; i++) {
+        fprintf(file, "%d\n", result[i]);
+    }
     fclose(file);
+}
 
-    printf("Multiples of 3 have been written to values2.txt.\n");
+int main() {
+    int a = 3;  // First term of the arithmetic progression
+    int d = 3;  // Common difference of the arithmetic progression
+    int N = 12; // Number of terms to sum
 
+    // Computing the sum of the first N terms of the AP
+    sum_of_ap(a, d, N);
     return 0;
 }
