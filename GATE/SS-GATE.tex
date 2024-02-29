@@ -43,8 +43,8 @@
 \begin{document}
 	\parindent 0px
 	\bibliographystyle{IEEEtran}
-	
-	\vspace{3cm}
+
+
 	
 	\title{}
 	\author{EE23BTECH11209 - K S Ballvardhan$^{*}$
@@ -71,14 +71,6 @@
 		\label{tab: Table2022cs36}
 	\end{table}
 	
-	Let the sequence be:
-	\begin{align}
-	1, F_2, F_3 \dots
-	\end{align}
-	Given recurrence relation is
-	\begin{align}
-	F_{n+1} &= F_n + F_{n-1}
-	\end{align}
     Taking z-transform of $ F_n$:
 	\begin{align}
 		F\brak{z} &= F_1 + z^{-1} F_2 + \sum_{n=2}^{\infty} F_n z^{-n}\\
@@ -95,14 +87,12 @@
 	
 	By residue theorem:
 	
-	\newpage
-	
 	\begin{align}
-		\notag F_n&=\frac{1}{\brak {0}!}\lim\limits_{z\to {\frac{1+\sqrt{5}}{2}}}\frac{d}{dz}\brak {{(z+\frac{1+\sqrt{5}}{2})}F\brak{z}}\\ &+ \frac{1}{\brak {0}!}\lim\limits_{z\to \frac{1-\sqrt{5}}{2}}\frac{d}{dz}\brak {{\brak{z+\frac{1-\sqrt{5}}{2}}}F\brak{z}}
+		F_n&=\frac{1}{\brak {0}!}\lim\limits_{z\to {\frac{1+\sqrt{5}}{2}}}\frac{d}{dz}\brak {{(z+\frac{1+\sqrt{5}}{2})}F\brak{z}} &+ \frac{1}{\brak {0}!}\lim\limits_{z\to \frac{1-\sqrt{5}}{2}}\frac{d}{dz}\brak {{\brak{z+\frac{1-\sqrt{5}}{2}}}F\brak{z}}
 	\end{align}
 	On simplifying we get,
 	\begin{align}
-		\notag F_n &= \brak{F_2-F_1}\brak{\brak{\frac{1+\sqrt{5}}{2}}^n-\brak{\frac{1-\sqrt{5}}{2}}^n}\\ &+ \brak{F_1}\brak{\brak{\frac{1+\sqrt{5}}{2}}^{n+1}-\brak{\frac{1-\sqrt{5}}{2}}^{n+1}}
+		F_n &= \brak{F_2-F_1}\brak{\brak{\frac{1+\sqrt{5}}{2}}^n-\brak{\frac{1-\sqrt{5}}{2}}^n} &+ \brak{F_1}\brak{\brak{\frac{1+\sqrt{5}}{2}}^{n+1}-\brak{\frac{1-\sqrt{5}}{2}}^{n+1}}
 	\end{align}
 	From the values in \tabref{tab: Table2022cs36}:
 	\begin{align}
@@ -119,5 +109,5 @@
 		\centering
 		\label{fig: fig4}
 	\end{figure}
-	
+ 
 \end{document}
