@@ -73,19 +73,19 @@
 	
 	Let the sequence be:
 	\begin{align}
-		F_1, F_2, F_3 \dots
+	1, F_2, F_3 \dots
 	\end{align}
 	Given recurrence relation is
 	\begin{align}
-		F_{n+1} &= F_n + F_{n-1}
+	F_{n+1} &= F_n + F_{n-1}
 	\end{align}
-	Taking z-transform of $ F_n$:
+    Taking z-transform of $ F_n$:
 	\begin{align}
 		F\brak{z} &= F_1 + z^{-1} F_2 + \sum_{n=2}^{\infty} F_n z^{-n}\\
-		\implies F\brak{z} &= F_1 + z^{-1} F_2 + z^{-1} \sum_{n=1}^{\infty} F_{n+1} z^{-n}\\
-		\implies F\brak{z} &= F_1 + z^{-1} F_2 + z^{-1} \sum_{n=1}^{\infty} \brak{F_n + F_{n-1}}z^{-n}\\
-		\implies F\brak{z} &= F_1 + z^{-1} F_2 + z^{-1}\brak{F\brak{z}-F_1 + z^{-1}F\brak{z}}\\
-		\therefore F\brak{z}&= \frac{F_1 + \brak{F_2-F_1}z^{-1}}{1-z^{-1}-z^{-2}}
+	    &= F_1 + z^{-1} F_2 + z^{-1} \sum_{n=1}^{\infty} F_{n+1} z^{-n}\\
+	    &= F_1 + z^{-1} F_2 + z^{-1} \sum_{n=1}^{\infty} \brak{F_n + F_{n-1}}z^{-n}\\
+	    &= F_1 + z^{-1} F_2 + z^{-1}\brak{F\brak{z}-F_1 + z^{-1}F\brak{z}}\\
+		\implies F\brak{z}&= \frac{F_1 + \brak{F_2-F_1}z^{-1}}{1-z^{-1}-z^{-2}}
 	\end{align}
 	Using Contour Integration to find the inverse $Z$-transform,
 	\begin{align}
@@ -98,7 +98,7 @@
 	\newpage
 	
 	\begin{align}
-		\notag F_n&=\frac{1}{\brak {0}!}\lim\limits_{z\to {\frac{1+\sqrt{5}}{2}}}\frac{d}{dz}\brak {{(z+\frac{1+\sqrt{5}}{2})}F\brak{z}}\\ &+ \frac{1}{\brak {0}!}\lim\limits_{z\to \frac{1-\sqrt{5}}{2}}\frac{d}{dz}\brak {{\brak{z+\frac{1-\sqrt{5}}{2}}}F\brak{z}}\\
+		\notag F_n&=\frac{1}{\brak {0}!}\lim\limits_{z\to {\frac{1+\sqrt{5}}{2}}}\frac{d}{dz}\brak {{(z+\frac{1+\sqrt{5}}{2})}F\brak{z}}\\ &+ \frac{1}{\brak {0}!}\lim\limits_{z\to \frac{1-\sqrt{5}}{2}}\frac{d}{dz}\brak {{\brak{z+\frac{1-\sqrt{5}}{2}}}F\brak{z}}
 	\end{align}
 	On simplifying we get,
 	\begin{align}
@@ -117,6 +117,7 @@
 		\includegraphics[width = \columnwidth]{figs/fig4}
 		\caption{Terms of the given sequence}
 		\centering
-		\label{fig: nm_63_fig_2}
+		\label{fig: fig4}
 	\end{figure}
+	
 \end{document}
