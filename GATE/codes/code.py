@@ -13,7 +13,6 @@ highlighted_index = 1
 # plot the graph
 plt.stem(range(1, len(data) + 1), x_n, markerfmt='bo', linefmt='b-', basefmt='r-',label=r'Simulation')
 plt.stem([highlighted_index], [data[highlighted_index - 1]], linefmt='r-', markerfmt='ro', basefmt=' ')
-plt.scatter(range(1, len(data) + 1), data, color='orange',marker='x',s=100,label=r'Analysis')
 # Set labels and title
 plt.xlabel('n')
 plt.ylabel('x(n)')
