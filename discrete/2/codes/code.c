@@ -26,7 +26,7 @@ void sum_of_ap(int a, int d, int N) {
  
     int result[N + N - 1];
     convolution(x, N, u, N, result);
-    FILE *file = fopen("result_terms.txt", "w");
+    FILE *file = fopen("data.txt", "w");
     if (file == NULL) {
         printf("Error opening file.\n");
     }
