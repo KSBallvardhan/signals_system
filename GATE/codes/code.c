@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-// Function to generate Fibonacci sequence with recurrence and write to file with indices
+// Function to generate Fibonacci sequence without indices
 void fibonacci(int n, int firstTerm, int secondTerm, FILE *file) {
-    int i, nextTerm;
-    fprintf(file, "Index, Value\n");
+    int nextTerm;
+    fprintf(file, "Value\n");
     
-    fprintf(file, "1, %d\n", firstTerm);
-    fprintf(file, "2, %d\n", secondTerm);
+    fprintf(file, "%d\n", firstTerm);
+    fprintf(file, "%d\n", secondTerm);
 
-    for (i = 3; i <= n; ++i) {
+    while (n > 2) {
         nextTerm = firstTerm + secondTerm;
-        fprintf(file, "%d, %d\n", i, nextTerm);
+        fprintf(file, "%d\n", nextTerm);
         firstTerm = secondTerm;
         secondTerm = nextTerm;
+        n--;
     }
 }
 
@@ -27,13 +28,13 @@ int main() {
         return 1; // Exit with an error code
     }
 
-    // Generate and write the first 8 terms of the Fibonacci sequence with indices
+    // Generate and write the first 8 terms of the Fibonacci sequence
     fibonacci(8, firstTerm, secondTerm, file);
 
     // Close the file
     fclose(file);
 
-    printf("Fibonacci sequence with indices has been written to data.txt.\n");
+    printf("Fibonacci sequence has been written to data.txt.\n");
 
     return 0;
 }
