@@ -1,1 +1,13 @@
-
+\begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Parameter} & \textbf{Description} & \textbf{Value} \\
+    \hline
+    $ F_5$ & Sixth term of the sequence & 37 \\
+    \hline
+    $ F_6$ & Seventh term of the sequence & 60 \\
+    \hline
+    $ F_1$ & First term of the sequence & ? \\
+    \hline
+    $ F_2$ & Second term of the sequence & ? \\
+    \hline
+\end{tabular}
