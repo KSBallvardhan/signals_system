@@ -26,7 +26,7 @@ def butter_lowpass_filter(data, cutoff, fs, order=4):
 input_file = "BAF.wav"
 output_file_builtin = "BAF_filtered_builtin.wav"
 output_file_custom = "BAF_filtered_custom.wav"
-cutoff_frequency = 1000  # Hz
+cutoff_frequency = 5000  # Hz
 order = 4
 max_time = 5  # seconds
 

@@ -13,7 +13,7 @@ sampl_freq=fs
 order=4
 
 #cutoff frquency 1kHz
-cutoff_freq=1000.0 
+cutoff_freq=5000.0 
 
 #digital frequency
 Wn=2*cutoff_freq/sampl_freq  
