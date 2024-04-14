@@ -1,4 +1,3 @@
-
 \documentclass{article}
 \usepackage{float}
 \usepackage{circuitikz}
@@ -142,7 +141,7 @@
 		we get $N\geq 4$ and $0.279 \leq \epsilon \leq 0.61$\\
 		The below code plots \eqref{eq:mag_freq_response} for different values of $\epsilon$ .
 		\begin{lstlisting}
-			https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/P1.py
+			https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/py1.py
 		\end{lstlisting}
 		\begin{figure}[htbp]
 			\centering
@@ -175,14 +174,14 @@
 		
 		The below code computes the values of $s_k$ and stores it in a text file. 
 		\begin{lstlisting}
-			https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/poles.c
+			https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/poles.c
 		\end{lstlisting}
 		
 		The poles obtained are formulated in the table below.
 		\input{tables/table2.tex}
 		The below code plots the pole-zero plot.
 		\begin{lstlisting}
-			https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/P2.py
+			https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/py2.py
 		\end{lstlisting}
 		\newpage
 		\begin{figure}[htbp]
@@ -208,7 +207,7 @@
 			&= \frac{0.448}{s_{L}^4 + 1.3534s_L^3 + 1.9157s_L^2 + 1.2378s_L + 0.4652}\label{eq:design}
 		\end{align}
 		\begin{lstlisting}
-			https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/P3.py
+			https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/py3.py
 		\end{lstlisting}
 		\begin{figure}[htbp]
 			\centering
@@ -243,7 +242,7 @@
 		well as negative frequencies.  We find that the passband and stopband frequencies in the figure
 		match well with those obtained analytically through the bilinear transformation.
 		\begin{lstlisting}
-			https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/P4.py
+			https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/py4.py
 		\end{lstlisting}
 		\begin{figure}[htbp]
 			\centering
@@ -263,7 +262,7 @@
 			H_{d,BP}(z) &= \frac{768.07z^8 -3072.28z^6 + 4608.42z^4 - 3072.28z^2 + 768.07}{29144.27z^8 - 177160.26z^7 + 514040.38z^6 - 912061.22z^5 + 107708.04z^4 - 864831.34z^3 + 462182.34z^2 - 151041.58z + 23563.53}
 		\end{align}
 		\begin{lstlisting}
-			https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/P5.py
+			https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/py5.py
 		\end{lstlisting}
 		\begin{figure}[htbp]
 			\centering
@@ -285,7 +284,7 @@
 		&= 0.014\pi
 	\end{align}
 	\begin{lstlisting}
-		https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/P6.py
+		https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/py6.py
 	\end{lstlisting}
 	\begin{figure}[htbp]
 		\centering
@@ -321,7 +320,6 @@
 		where $A = -20\log_{10}\delta$.  Substituting the appropriate values from the design specifications, we obtain
 		$A = 16.4782$ and $N \geq 48$.
 		
-		
 		\item  $\beta$ is chosen according to
 		
 		\begin{align}
@@ -350,7 +348,7 @@
 		\end{align}
 	\end{enumerate}
 	\begin{lstlisting}
-		https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/P7.py
+		https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/py7.py
 	\end{lstlisting}
 	\newpage
 	\begin{figure}[htbp]
@@ -359,8 +357,10 @@
 		\caption{Magnitude Response of Low Pass Filter after using Kaiser Window}
 		\label{fig:Kaiser_LPF_response}
 	\end{figure}
+	
 	\subsection{The Equivalent Band Pass Filter}
 	A Band-Pass Filter (BPF) can be obtained by subtracting the magnitude response of a Low-Pass Filter (LPF) with cutoff frequency $\omega_{p1}$ from another LPF magnitude response with cutoff frequency $\omega_{p2}$.
+	
 	\begin{align}
 		h_{BP}\brak{n} = 
 		\begin{cases} 
@@ -381,7 +381,7 @@
 		\end{cases} \label{eq:h(n)desired_for_LPF}
 	\end{align}
 	\begin{lstlisting}
-		https://github.com/pragnidhved/signals-and-systems/blob/main/filter%20design/codes/P8.py
+		https://github.com/KSBallvardhan/signals_system/blob/82422df0214983c609a58248f2110732a1e57d72/filterDesign/codes/py8.py
 	\end{lstlisting}
 	\begin{figure}[htbp]
 		\centering
